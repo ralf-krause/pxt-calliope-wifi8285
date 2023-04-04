@@ -9,8 +9,9 @@ namespace Wifi8285 {
     /**
      * Setup UART WiFi V2 to connect to  Wi-Fi
      */
+    //% group="WiFi8285"
+    //% weight=100
     //% block="Setup Wifi|TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
-    //% group="UartWiFi"
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
@@ -42,8 +43,9 @@ namespace Wifi8285 {
     /**
      * Check if UART WiFi V2 is connected to Wifi
      */
+    //% group="WiFi8285"
+    //% weight=90
     //% block="Wifi OK?"
-    //% group="UartWiFi"
     export function wifiOK() {
         return isWifiConnected
     }
