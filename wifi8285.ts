@@ -59,6 +59,13 @@ namespace Wifi8285 {
     //% expandableArgumentMode="enabled"
     //% apiKey.defl="API Key"
     //% field1.defl="x"
+    //% field2.defl="x"
+    //% field3.defl="x"
+    //% field4.defl="x"
+    //% field5.defl="x"
+    //% field6.defl="x"
+    //% field7.defl="x"
+    //% field8.defl="x"
     //% subcategory="ThingSpeak"
     export function sendToThinkSpeak(apiKey: string, field1: number = 0, field2: number = 0, field3: number = 0, field4: number = 0, field5: number = 0, field6: number = 0, field7: number = 0, field8: number = 0) {
         let result = 0
@@ -108,8 +115,8 @@ namespace Wifi8285 {
      */
     //% block="Send data to IFTTT|Event %event|Key %key|value1 %value1||value2 %value2|value3 %value3"
     //% expandableArgumentMode="enabled"
-    //% event.defl="your Event"
-    //% key.defl="your Key"
+    //% event.defl="Event"
+    //% key.defl="Key"
     //% value1.defl="Hello"
     //% value2.defl="Calliope"
     //% value3.defl="mini"
