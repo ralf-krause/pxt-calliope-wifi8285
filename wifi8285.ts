@@ -10,7 +10,7 @@ namespace Wifi8285 {
      * Setup UART Wifi V2 to connect to  Wifi
      */
     //% weight=100
-    //% block="Setup Wifi|TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
+    //% block="Setup Wifi|TX %txPin|RX %rxPin|Baudrate %baudrate|SSID = %ssid|Password = %passwd"
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
@@ -108,7 +108,7 @@ namespace Wifi8285 {
     //% value1.defl="Hello"
     //% value2.defl="Calliope"
     //% value3.defl="mini"
-    //% subcategory="IFTTT" weight=60
+    //% subcategory="IFTTT" weight=100
     export function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
         let result = 0
         let retry = 2
