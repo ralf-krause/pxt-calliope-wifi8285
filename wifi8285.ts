@@ -7,7 +7,7 @@ namespace Wifi8285 {
 
     let isWifiConnected = false;
     /**
-     * Setup UART Wifi V2 to connect to  Wifi
+     * Setup UART Wifi8285 to connect to  Wifi
      */
     //% weight=100
     //% block="Setup Wifi|TX %txPin|RX %rxPin|Baudrate %baudrate|SSID = %ssid|Password = %passwd"
@@ -42,7 +42,7 @@ namespace Wifi8285 {
     }
 
     /**
-     * Check if UART Wifi V2 is connected to Wifi
+     * Check if UART Wifi8285 is connected to Wifi
      */
     //% weight=90
     //% block="Wifi OK?"
@@ -50,13 +50,15 @@ namespace Wifi8285 {
         return isWifiConnected
     }
 
+
+    /*--------------------------------------------------------------------*/
     /**
      * Send data to ThinkSpeak
      */
-    //% block="Send Data to your ThinkSpeak Channel|Write API Key %apiKey|Field1 %field1|Field2 %field2|Field3 %field3|Field4 %field4|Field5 %field5|Field6 %field6|Field7 %field7|Field8 %field8"
+    //% block="Send data to ThinkSpeak|API Key %apiKey|field1 %field1|field2 %field2|field3 %field3|field4 %field4|field5 %field5|field6 %field6|field7 %field7|field8 %field8"
     //% expandableArgumentMode="enabled"
-    //% apiKey.defl="your Write API Key"
-    //% subcategory="ThingSpeak" weight=50
+    //% apiKey.defl="API Key"
+    //% subcategory="ThingSpeak"
     export function sendToThinkSpeak(apiKey: string, field1: number = 0, field2: number = 0, field3: number = 0, field4: number = 0, field5: number = 0, field6: number = 0, field7: number = 0, field8: number = 0) {
         let result = 0
         let retry = 2
@@ -98,17 +100,19 @@ namespace Wifi8285 {
         }
     }
 
+
+    /*--------------------------------------------------------------------*/
     /**
      * Send data to IFTTT
      */
-    //% block="Send Data to your IFTTT Event|Event %event|Key %key|value1 %value1||value2 %value2|value3 %value3"
-    //% group="UartWiFi"
+    //% block="Send data to IFTTT|Event %event|Key %key|value1 %value1||value2 %value2|value3 %value3"
+    //% expandableArgumentMode="enabled"
     //% event.defl="your Event"
     //% key.defl="your Key"
     //% value1.defl="Hello"
     //% value2.defl="Calliope"
     //% value3.defl="mini"
-    //% subcategory="IFTTT" weight=100
+    //% subcategory="IFTTT"
     export function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
         let result = 0
         let retry = 2
@@ -150,6 +154,9 @@ namespace Wifi8285 {
             if (result == 1) break
         }
     }
+
+
+    /*--------------------------------------------------------------------*/
 
     function waitAtResponse(target1: string, target2: string, target3: string, timeout: number) {
         let buffer = ""
