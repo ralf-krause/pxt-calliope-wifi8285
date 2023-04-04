@@ -10,7 +10,7 @@ namespace Wifi8285 {
      * Setup UART Wifi8285 to connect to  Wifi
      */
     //% weight=100
-    //% block="Setup Wifi|TX %txPin|RX %rxPin|Baudrate %baudrate|SSID = %ssid|Password = %passwd"
+    //% block="setup Wifi|TX %txPin|RX %rxPin|baudrate %baudrate|ssid = %ssid|password = %passwd"
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
@@ -55,7 +55,7 @@ namespace Wifi8285 {
     /**
      * Send data to ThinkSpeak
      */
-    //% block="Send data to ThinkSpeak|API key %apiKey|field 1 %field1||field 2 %field2|field 3 %field3|field 4 %field4|field 5 %field5|field 6 %field6|field 7 %field7|field 8 %field8"
+    //% block="send data to ThinkSpeak |API key %apiKey|field 1 %field1||field 2 %field2|field 3 %field3|field 4 %field4|field 5 %field5|field 6 %field6|field 7 %field7|field 8 %field8|"
     //% expandableArgumentMode="enabled"
     //% apiKey.defl="API Key"
     //% subcategory="ThingSpeak"
@@ -105,10 +105,9 @@ namespace Wifi8285 {
     /**
      * Send data to IFTTT
      */
-    //% block="Send data to IFTTT|event %event|service key %key|value 1 %value1||value 2 %value2|value 3 %value3"
-    //% expandableArgumentMode="enabled"
-    //% event.defl="Event"
-    //% key.defl="Key"
+    //% block="send data to IFTTT |event %event|key %key|value 1 %value1 value 2 %value2 value 3 %value3"
+    //% event.defl="event"
+    //% key.defl="service key"
     //% subcategory="IFTTT"
     export function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
         let result = 0
