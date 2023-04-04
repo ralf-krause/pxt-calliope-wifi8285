@@ -1,7 +1,7 @@
 /**
  * Functions for Wifi8285 module.
  */
-//% weight=10 color=#606060 icon="\uf1eb" block="Wifi8285"
+//% weight=10 color=#606060 icon="\uf1eb" block="Wifi 8285"
 
 namespace Wifi8285 {
 
@@ -9,7 +9,6 @@ namespace Wifi8285 {
     /**
      * Setup UART WiFi V2 to connect to  Wi-Fi
      */
-    //% group="WiFi8285"
     //% weight=100
     //% block="Setup Wifi|TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
     //% txPin.defl=SerialPin.C17
@@ -54,9 +53,9 @@ namespace Wifi8285 {
      * Send data to ThinkSpeak
      */
     //% block="Send Data to your ThinkSpeak Channel|Write API Key %apiKey|Field1 %field1|Field2 %field2|Field3 %field3|Field4 %field4|Field5 %field5|Field6 %field6|Field7 %field7|Field8 %field8"
-    //% group="UartWiFi"
     //% expandableArgumentMode="enabled"
     //% apiKey.defl="your Write API Key"
+    //% subcategory="ThingSpeak" weight=50
     export function sendToThinkSpeak(apiKey: string, field1: number = 0, field2: number = 0, field3: number = 0, field4: number = 0, field5: number = 0, field6: number = 0, field7: number = 0, field8: number = 0) {
         let result = 0
         let retry = 2
@@ -108,6 +107,7 @@ namespace Wifi8285 {
     //% value1.defl="Hello"
     //% value2.defl="Calliope"
     //% value3.defl="mini"
+    //% subcategory="IFTTT" weight=60
     export function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
         let result = 0
         let retry = 2
