@@ -1,13 +1,13 @@
 /**
  * Functions for Wifi8285 module.
  */
-//% weight=10 color=#606060 icon="\uf1eb" block="Wifi 8285"
+//% weight=10 color=#606060 icon="\uf1eb" block="Wifi8285"
 
 namespace Wifi8285 {
 
     let isWifiConnected = false;
     /**
-     * Setup UART WiFi V2 to connect to  Wi-Fi
+     * Setup UART Wifi V2 to connect to  Wifi
      */
     //% weight=100
     //% block="Setup Wifi|TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
@@ -42,7 +42,7 @@ namespace Wifi8285 {
     }
 
     /**
-     * Check if UART WiFi V2 is connected to Wifi
+     * Check if UART Wifi V2 is connected to Wifi
      */
     //% weight=90
     //% block="Wifi OK?"
