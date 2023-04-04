@@ -58,6 +58,7 @@ namespace Wifi8285 {
     //% block="Send data to ThinkSpeak|API Key %apiKey|field1 %field1|field2 %field2|field3 %field3|field4 %field4|field5 %field5|field6 %field6|field7 %field7|field8 %field8"
     //% expandableArgumentMode="enabled"
     //% apiKey.defl="API Key"
+    //% field1.defl="x"
     //% subcategory="ThingSpeak"
     export function sendToThinkSpeak(apiKey: string, field1: number = 0, field2: number = 0, field3: number = 0, field4: number = 0, field5: number = 0, field6: number = 0, field7: number = 0, field8: number = 0) {
         let result = 0
