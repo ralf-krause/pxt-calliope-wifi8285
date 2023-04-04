@@ -1,6 +1,6 @@
 {
     "name": "pxt-calliope-wifi8285",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "MakeCode-Erweiterung für Calliope und Wifi8285",
     "dependencies": {
         "core": "*"
