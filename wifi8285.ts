@@ -14,6 +14,8 @@ namespace Wifi8285 {
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
+    //% ssid.defl="Calliope"
+    //% passwd="12345678"
     export function setupWifi(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string) {
         let result = 0
 
@@ -42,7 +44,6 @@ namespace Wifi8285 {
     /**
      * Check if UART WiFi V2 is connected to Wifi
      */
-    //% group="WiFi8285"
     //% weight=90
     //% block="Wifi OK?"
     export function wifiOK() {
