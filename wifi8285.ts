@@ -15,7 +15,7 @@ namespace Wifi8285 {
     //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
     //% ssid.defl="Calliope"
-    //% passwd="12345678"
+    //% passwd.defl="12345678"
     export function setupWifi(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string) {
         let result = 0
 
